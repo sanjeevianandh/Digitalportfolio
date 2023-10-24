@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>portfolio</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #e3e3e3;
+            }
+            header{
+                background-color: blue;
+                color: black;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative; /*AAdd this*/
+            }
+            .header-content h1{
+                font-size: 2.5rem;
+            }
+            /* Add style for the round profile picture */
+            .profile-picture{
+                width: 100px; /* Adjust the size as needed */ 
+                height: 100px; 
+                border-radius: 75%; /* Create a circular shape */
+                object-fit: cover; /* To ensure the image fills the circular area */
+                position: absolute; /* Add this */
+                top: 75px; /* Adjust top position as needed */
+                left: 75px; /* Adjust left position as needed */
+            }
+            nav{
+                background-color: blue;
+                color: orange;
+                text-align: center;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin: 0 20px;
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: #fff; 
+            }
+            .section-content{
+                background-color: aqua;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                text-align: justify;
+            }
+
+            .download-button{
+                background-color: #333;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 20px;
+                display: inline-block;
+                margin-top: 10px;
+                align-self: center;
+            }
+            footer{
+                text-align: center;
+                padding: 1rem 0;
+                background-color: #555;
+                color: #fff;
+            }
+            ul{
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <!--Add your profile picture here-->
+                <img src=."mypic.jpeg" alt="your profile picture" class="profile-picture">
+                <h1>SANJEEVI A</h1>
+                <p>
+                    front-end-devloper beginner
+                </p>
+
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+        <section id="about">
+            <div class="section-content">
+                <h1>About Me</h1>
+                <p>I am Sanjeevi I have front-end-devloper. desing in web page the html,css and javasript learning & desing a website more interetive. A responsive desing makes your website accessible to all users.</p>
+
+            </div>
+        </section>
+        <section id="Education">
+            <div class="section-content">
+                <h2>Education</h2>
+                <p>Anna University -Bachelor of Computer Application</p>
+                <h2>Education</h2>
+                <p>Anna University -BCA-webdesing</p>
+
+            </div>
+
+        </section>
+        <section id="Skills">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>webdesing</li>
+                    <li>java</li>
+                    <li>Internet of Things</li>   
+                </ul> 
+
+            </div>
+        </section>
+         <section id="Projects">
+              <div class="section-content">
+                <h2>Project</h2>   
+                <ul>
+                    <li><a href="#">Register </a></li>
+                    <li><a href="#">Anime World</a></li>
+                </ul>
+            </div>
+         </section>
+         <footer>
+            <p>&copy; 2023 Sanjeevi A</p>
+         </footer>
+         <script>
+            //smooth scrolling to section when clicking on navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+                anchor.addEventListener('click',function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').sudstring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTo,
+                            behavior:'smooth'
+                        });
+                    }
+                });
+            });
+         </script>
+
+    </body>
+</html>
